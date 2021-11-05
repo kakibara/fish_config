@@ -7,5 +7,5 @@ fish -c "fisher install jethrokuan/z oh-my-fish/theme-agnoster oh-my-fish/peco"
 mkdir ~/.config
 mkdir ~/.config/fish
 
-curl -L https://raw.githubusercontent.com/kakibara/fish_config/master/config.fish -o ~/.config/fish/config.fish
-curl -L https://raw.githubusercontent.com/kakibara/dev_env_docker/master/peco_select_history.fish -o ~/.config/fish/functions/peco_select_history.fish
+curl -L https://raw.githubusercontent.com/kakibara/fish_config/main/files/config.fish -o ~/.config/fish/config.fish
+curl -L https://raw.githubusercontent.com/kakibara/fish_config/main/files/peco_select_history.fish -o ~/.config/fish/functions/peco_select_history.fish
