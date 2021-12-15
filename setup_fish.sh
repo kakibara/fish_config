@@ -13,7 +13,7 @@ fi
 
 
 fish -c "curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish"
-fish -c "fisher install jethrokuan/z oh-my-fish/theme-agnoster oh-my-fish/peco"
+fish -c "fisher install jethrokuan/z oh-my-fish/theme-agnoster"
 mkdir -p ~/.config
 mkdir -p ~/.config/fish
 
