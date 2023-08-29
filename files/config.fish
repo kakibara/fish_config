@@ -10,6 +10,7 @@ if set -q SINGULARITY_CONTAINER
   set -x WORKON_HOME $HOME/in_singularity/pipenv/venv
   set -x POETRY_CACHE_DIR $HOME/in_singularity/pypoetry
 else
+  # default value
   set -x WORKON_HOME $HOME/.local/share/virtualenvs
   set -x POETRY_CACHE_DIR $HOME/.local/share/pypoetry
 end
