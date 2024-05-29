@@ -14,3 +14,9 @@ else
   set -x WORKON_HOME $HOME/.local/share/virtualenvs
   set -x POETRY_CACHE_DIR $HOME/.local/share/pypoetry
 end
+
+# for python
+set -x PIPENV_VENV_IN_PROJECT 1
+set -x PIPENV_PYTHON $PYENV_ROOT/shims/python
+
+pyenv init - | source
