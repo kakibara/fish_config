@@ -30,10 +30,11 @@ agnosterの記号表示にはPowerline対応フォントをターミナルに設
 まず `fish` で動作確認した後、次を実行してください（パスワード入力が必要になる場合があります）。
 
 ```sh
-command -v fish
-# 上で表示されたパスが /etc/shells に未登録の場合だけ追加する
-command -v fish | sudo tee -a /etc/shells
-chsh -s "$(command -v fish)"
+fish_path="$(command -v fish)"
+if ! grep -Fxq "$fish_path" /etc/shells; then
+    printf '%s\n' "$fish_path" | sudo tee -a /etc/shells
+fi
+chsh -s "$fish_path"
 ```
 
 新しいターミナルを開くと反映されます。macOSで元に戻す場合は `chsh -s /bin/zsh` を実行します。
@@ -41,3 +42,12 @@ chsh -s "$(command -v fish)"
 
 参照: [fishの公式インストール手順](https://github.com/fish-shell/fish-shell)、
 [Fisher](https://github.com/jorgebucaran/fisher)。
+
+## 設定と作業記録
+
+- `files/config.fish`: HomebrewのPATH、Ctrl+R、コンテナ用環境変数。
+- `files/peco_select_history.fish`: pecoによる履歴検索。
+- `files/fish_plugins`: セットアップ対象のプラグイン一覧。1行につき1つのリポジトリ名を記載します。
+  スクリプトがこの一覧をFisherへ渡します。既存のインストール先の一覧は上書きしません。
+
+今回の調査、変更、検証、適用・復元方法は [セットアップ作業記録](docs/setup-guide.md) を参照してください。

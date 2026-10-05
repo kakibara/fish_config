@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Run from a checkout so unpublished local changes are installed as well.
 script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-for file in config.fish peco_select_history.fish; do
+for file in config.fish peco_select_history.fish fish_plugins; do
     if [[ ! -f "$script_dir/files/$file" ]]; then
         echo "Missing files/$file. Clone the repository and run bash setup_fish.sh." >&2
         exit 1
@@ -66,7 +66,17 @@ trap 'rm -f "$fisher_file"' EXIT
 curl --fail --silent --show-error --location \
     https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish \
     --output "$fisher_file"
-fish --no-config -c 'source $argv[1]; and fisher install jorgebucaran/fisher jethrokuan/z oh-my-fish/theme-agnoster' "$fisher_file"
+plugins=()
+while IFS= read -r plugin || [[ -n "$plugin" ]]; do
+    [[ -z "$plugin" || "$plugin" == \#* ]] && continue
+    plugins+=("$plugin")
+done < "$script_dir/files/fish_plugins"
+if (( ${#plugins[@]} == 0 )); then
+    echo "No plugins listed in files/fish_plugins." >&2
+    exit 1
+fi
+# Pass each plugin as a separate argument; preserve other installed plugins.
+fish --no-config -c 'source $argv[1]; and fisher install $argv[2..-1]' "$fisher_file" "${plugins[@]}"
 
 mkdir -p "$config_dir/functions"
 cp "$script_dir/files/config.fish" "$config_dir/config.fish"
