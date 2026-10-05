@@ -1,16 +1,27 @@
-function fish_user_key_bindings
-  bind \cr peco_select_history # Bind for peco select history to Ctrl+R
+# Homebrew must also be available when fish starts as a login shell.
+if test (uname) = Darwin
+    for brew_bin in /opt/homebrew/bin/brew /usr/local/bin/brew
+        if test -x $brew_bin
+            $brew_bin shellenv fish | source
+            break
+        end
+    end
 end
 
-# singularity config
-set -x SINGULARITY_NV true
-set -x SINGULARITY_HOSTNAME SNG-(string split . (hostname) | head -n 1)
+if status is-interactive
+    function fish_user_key_bindings
+        bind \cr peco_select_history
+    end
+end
 
-if set -q SINGULARITY_CONTAINER
-  set -x WORKON_HOME $HOME/in_singularity/pipenv/venv
-  set -x POETRY_CACHE_DIR $HOME/in_singularity/pypoetry
+# Singularity / Apptainer container settings.
+set -gx SINGULARITY_NV true
+set -gx SINGULARITY_HOSTNAME SNG-(string split . (hostname))[1]
+
+if set -q SINGULARITY_CONTAINER; or set -q APPTAINER_CONTAINER
+    set -gx WORKON_HOME $HOME/in_singularity/pipenv/venv
+    set -gx POETRY_CACHE_DIR $HOME/in_singularity/pypoetry
 else
-  # default value
-  set -x WORKON_HOME $HOME/.local/share/virtualenvs
-  set -x POETRY_CACHE_DIR $HOME/.local/share/pypoetry
+    set -gx WORKON_HOME $HOME/.local/share/virtualenvs
+    set -gx POETRY_CACHE_DIR $HOME/.local/share/pypoetry
 end
