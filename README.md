@@ -51,3 +51,14 @@ chsh -s "$fish_path"
   スクリプトがこの一覧をFisherへ渡します。既存のインストール先の一覧は上書きしません。
 
 今回の調査、変更、検証、適用・復元方法は [セットアップ作業記録](docs/setup-guide.md) を参照してください。
+
+## macOSのシステム設定
+
+Macintosh HDからコピーしたマウスのスクロール方向、Dock、Finder、外観などの設定は
+`files/macos/settings.json` にあります。fishとは別に適用します。
+[macOS設定の移行・確認・復元手順](docs/macos-settings.md) を参照してください。
+
+```sh
+python3 macos_settings.py apply --dry-run
+python3 macos_settings.py apply
+```

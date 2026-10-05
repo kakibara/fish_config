@@ -1,0 +1,247 @@
+{
+  "format": 1,
+  "captured_at": "2026-10-05T21:57:03.404402+09:00",
+  "source": "offline preference files",
+  "settings": [
+    {
+      "domain": "NSGlobalDomain",
+      "key": "com.apple.swipescrolldirection",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "com.apple.mouse.scaling",
+      "type": "float",
+      "value": null
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "com.apple.trackpad.scaling",
+      "type": "float",
+      "value": null
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "AppleShowScrollBars",
+      "type": "string",
+      "value": null
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "AppleInterfaceStyle",
+      "type": "string",
+      "value": "Dark"
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "KeyRepeat",
+      "type": "int",
+      "value": null
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "InitialKeyRepeat",
+      "type": "int",
+      "value": null
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "ApplePressAndHoldEnabled",
+      "type": "bool",
+      "value": null
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "NSAutomaticSpellingCorrectionEnabled",
+      "type": "bool",
+      "value": null
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "NSAutomaticCapitalizationEnabled",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "NSAutomaticPeriodSubstitutionEnabled",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "NSGlobalDomain",
+      "key": "AppleShowAllExtensions",
+      "type": "bool",
+      "value": null
+    },
+    {
+      "domain": "com.apple.dock",
+      "key": "autohide",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.dock",
+      "key": "tilesize",
+      "type": "int",
+      "value": 68
+    },
+    {
+      "domain": "com.apple.dock",
+      "key": "magnification",
+      "type": "bool",
+      "value": null
+    },
+    {
+      "domain": "com.apple.dock",
+      "key": "largesize",
+      "type": "int",
+      "value": null
+    },
+    {
+      "domain": "com.apple.dock",
+      "key": "orientation",
+      "type": "string",
+      "value": null
+    },
+    {
+      "domain": "com.apple.dock",
+      "key": "minimize-to-application",
+      "type": "bool",
+      "value": null
+    },
+    {
+      "domain": "com.apple.dock",
+      "key": "show-recents",
+      "type": "bool",
+      "value": null
+    },
+    {
+      "domain": "com.apple.finder",
+      "key": "AppleShowAllFiles",
+      "type": "bool",
+      "value": null
+    },
+    {
+      "domain": "com.apple.finder",
+      "key": "ShowPathbar",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.finder",
+      "key": "ShowStatusBar",
+      "type": "bool",
+      "value": null
+    },
+    {
+      "domain": "com.apple.finder",
+      "key": "FXPreferredViewStyle",
+      "type": "string",
+      "value": "Nlsv"
+    },
+    {
+      "domain": "com.apple.finder",
+      "key": "FXDefaultSearchScope",
+      "type": "string",
+      "value": null
+    },
+    {
+      "domain": "com.apple.finder",
+      "key": "ShowExternalHardDrivesOnDesktop",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.finder",
+      "key": "ShowHardDrivesOnDesktop",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "domain": "com.apple.finder",
+      "key": "ShowRemovableMediaOnDesktop",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.AppleMultitouchTrackpad",
+      "key": "Clicking",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "domain": "com.apple.AppleMultitouchTrackpad",
+      "key": "Dragging",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "domain": "com.apple.AppleMultitouchTrackpad",
+      "key": "DragLock",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "domain": "com.apple.AppleMultitouchTrackpad",
+      "key": "TrackpadRightClick",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.AppleMultitouchTrackpad",
+      "key": "TrackpadThreeFingerDrag",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "domain": "com.apple.AppleMultitouchTrackpad",
+      "key": "TrackpadPinch",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.AppleMultitouchTrackpad",
+      "key": "TrackpadRotate",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.driver.AppleBluetoothMultitouch.mouse",
+      "key": "MouseButtonMode",
+      "type": "string",
+      "value": "OneButton"
+    },
+    {
+      "domain": "com.apple.driver.AppleBluetoothMultitouch.mouse",
+      "key": "MouseHorizontalScroll",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.driver.AppleBluetoothMultitouch.mouse",
+      "key": "MouseVerticalScroll",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.driver.AppleBluetoothMultitouch.mouse",
+      "key": "MouseMomentumScroll",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "domain": "com.apple.screencapture",
+      "key": "type",
+      "type": "string",
+      "value": null
+    },
+    {
+      "domain": "com.apple.screencapture",
+      "key": "disable-shadow",
+      "type": "bool",
+      "value": null
+    }
+  ]
+}
